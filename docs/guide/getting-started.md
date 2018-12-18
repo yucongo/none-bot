@@ -8,11 +8,16 @@
 
 ```python
 import none
+import none.default_config as config
 
 if __name__ == '__main__':
+    config.HOST = '127.0.0.1'
+    config.HOST = 8080
     none.init()
     none.load_builtin_plugins()
-    none.run(host='127.0.0.1', port=8080)
+    
+    none.run(()
+    # none.run(host='127.0.0.1', port=8080)  # 这个貌似会出“port already in use” 的错误
 ```
 
 `if __name__ == '__main__'` 语句块的这几行代码将依次：
